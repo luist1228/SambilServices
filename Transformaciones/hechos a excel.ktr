@@ -682,7 +682,7 @@ FROM cventas
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\Hechos Ventas.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboVentas\Hechos Ventas.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -866,7 +866,7 @@ FROM dtiempo
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DtiempoVentas.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboVentas\DtiempoVentas.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1031,7 +1031,7 @@ FROM dtienda
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DTiendasVentas.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboVentas\DTiendasVentas.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1196,7 +1196,7 @@ FROM dcliente
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DClienteTienda.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboVentas\DClienteTienda.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1376,7 +1376,7 @@ FROM hecentrada
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\Hechos Entradas.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboEntradas\Hechos Entradas.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1556,7 +1556,7 @@ FROM dimfechae
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DFechaEntrada.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboEntradas\DFechaEntrada.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1721,7 +1721,7 @@ FROM dimpersona
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DPersonaEntrada.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboEntradas\DPersonaEntrada.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1876,7 +1876,7 @@ FROM dimcamara
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DCamaraEntrada.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboEntradas\DCamaraEntrada.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -2031,7 +2031,7 @@ FROM dimsexo
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\csvFiles\DSexoSexo.xls</name>
+      <name>C:\Users\luism\Documents\Uni\Sistemas\Admin Bd\Proyecto2\CuboEntradas\DSexoSexo.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
