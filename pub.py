@@ -9,6 +9,9 @@ import numpy as np
 import datetime
 import psycopg2 as psy
 import pandas as pd
+import csv
+import datetime
+
 
 
 
@@ -127,6 +130,11 @@ def main():
             #time.sleep(0.1)
         days -= 1
         currentTime = datetime.timedelta(days=1) + currentTime.replace(hour=8, minute=0)
+
+    getDataFromDB()
+    insertData(knownPeople)
+
+
 
 
 #Publisher's Methods
@@ -294,7 +302,17 @@ def enteringMall(cameraID, currentTime):
     while((age < minAge) or (age > 90)):
         age = int(np.random.normal(35,15))
 
-    person = [macAddress,gender,age]
+    correctData = False
+    while(not correctData):
+        personData = random.choice(dataPeople)
+        if(gender == personData["gender"]):
+            correctData = True
+            personID = getPersonID(age)
+        
+    name = personData["first_name"]
+    lastname = personData["last_name"]
+
+    person = [macAddress,gender,age,personID,name,lastname]
 
     payload = {
         "cameraID": str(cameraID),
@@ -677,6 +695,40 @@ def queryTableBeaconID():
     print(Lista)
 
     return Lista
+
+
+
+
+def insertData(data):
+    with open('csvFiles/poll.csv','a', newline='') as csvfile:
+        filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        filewriter.writerow(['MacAddress', 'Name', 'Lastname', 'ID', 'Sex', 'Age'])
+        for person in data:
+            filewriter.writerow([person[0], person[4], person[5], person[3], person[1], person[2]])
+
+
+
+def getDataFromDB():
+    sql = '''select count(e."id") Sales , DATE(e."fecha") as Date , e."fktienda" as StoreID, SUM(e.monto) as Amount from compra as e
+    group by Date, StoreID
+    order by Date desc'''
+    df = pd.read_sql_query(sql,ctienda)
+    print(df)
+    
+    with open('csvFiles/sales.csv','a',newline='') as csvfile:
+        filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        filewriter.writerow(['Sales','StoreID','Date','Amount'])
+
+        dayCounter = 1
+        target = 1
+        for index, row in df.iterrows():
+            filewriter.writerow([row['sales'], row['storeid'], dayCounter, int(row['amount'])])
+            target += 1
+            if((index+1)%3 == 0):
+                dayCounter += 1
+                target = 1
+
+
 
 if __name__ == "__main__":
     main()
